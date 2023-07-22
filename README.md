@@ -19,6 +19,7 @@
   * System.out.println("文字" + 要顯示的變數 ); 
   * System.out.print("文字" + 要顯示的變數 );
 
+
     
     println：用於輸出文字並換行。它會將輸出列出到下一行並自動換行
 
