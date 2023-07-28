@@ -39,8 +39,16 @@
 * 物件擁有資料來存放數值
 * 物件擁有函式來運算這些值(在JAVA中稱為*方法*)
 
+## ERROR 修正 : ERROR StatusLogger No Log4j 2 configuration file found.
+在 Eclipse 中，可以通過以下步驟來設置系統屬性：
 
+1.在項目上右鍵單擊，選擇 "Run As" -> "Run Configurations..."。
+2.在左側列表中選擇您的應用程序。
+3.在右側選擇 "Arguments" 頁面。
+4.在 "VM arguments" 區域中，添加以下行（假設您的 log4j2.xml 文件位於 src/main/resources 目錄下）：-Dlog4j.configurationFile=src/main/resources/log4j2.xml
+5.點擊 "Apply" 和 "Run"。
 
+現在，Log4j 2 應該能夠找到並使用您的配置文件了。
 
 
 
