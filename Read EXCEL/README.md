@@ -24,7 +24,11 @@
 
 3.在右側選擇 "Arguments" 頁面。
 
-4.在 "VM arguments" 區域中，添加以下行（假設您的 log4j2.xml 文件位於 src 目錄下）：-Dlog4j.configurationFile=src/log4j2.xml
+4.在 "VM arguments" 區域中，添加以下行（假設您的 log4j2.xml 文件位於 src 目錄下）：
+
+```
+-Dlog4j.configurationFile=src/log4j2.xml
+```
 
 5.點擊 "Apply" 和 "Run"。
 
