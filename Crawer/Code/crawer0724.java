@@ -6,6 +6,7 @@ import org.jsoup.select.Elements;
 import javax.net.ssl.*;
 import java.security.cert.X509Certificate;
 
+
 public class crawer0724 {
     public static void main(String[] args) throws Exception {
     	
@@ -34,11 +35,7 @@ public class crawer0724 {
         };
         // Install the all-trusting HostVerifier
         HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
-
-        
-        
-        
-        
+    
         String url = "http://www.moneydj.com/funddj/yb/YP301000.djhtm";
         Document doc = Jsoup.connect(url).get();
        /* Elements divElements = doc.body().select("div.InternalSearch");
@@ -48,7 +45,8 @@ public class crawer0724 {
         for(Element linkElement : linkElements) {
             System.out.println(linkElement.text());
         }*/
-     
+        
+     // �ؤ@�ӦW��divElements��Elements��H�A�ӹ�H�]�tHTML���ɤ��Ҧ��a��"div.InternalSearch"��ܾ���div����
         Elements divElements = doc.body().select("div.InternalSearch");
         Elements tableElements = divElements.select("table.InternalSearch-TB1");
 
@@ -57,12 +55,13 @@ public class crawer0724 {
             Elements links = table.select("table.InternalSearch-TD").select("a");
 
             StringBuilder output = new StringBuilder(title);
-            for(Element ss : links) {
-                output.append("\n").append(ss.text());
+            
+            for(Element link : links) {
+                output.append("\n").append(link.text());
             }
             System.out.println(output.toString()+"\n");
             
-        }
+         }
 }
             
 }
